@@ -82,7 +82,7 @@ fun BackButton(
                 IconButton(onClick = {  }) {
                     Image(
                         painter = painterResource(id = R.drawable.left_arrow),
-                        contentDescription = "Back",
+                        contentDescription = "Backleftarrow",
                         Modifier.size(24.dp)
                     )
                 }
