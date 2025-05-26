@@ -1,0 +1,7 @@
+
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="selected_language">Tiếng Việt</string>
+    <string name="settings_title">Cài đặt</string>
+    <string name="username">Tên người dùng</string>
+</resources>

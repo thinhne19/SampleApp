@@ -1,0 +1,7 @@
+
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="selected_language">English</string>
+    <string name="settings_title">Settings</string>
+    <string name="username">Username</string>
+</resources>
