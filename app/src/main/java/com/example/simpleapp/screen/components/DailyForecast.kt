@@ -38,7 +38,7 @@ import com.example.simpleapp.R
 fun DailyForecast(
     modifier: Modifier = Modifier,
     forecast: String = "Rain Showers",
-    date: String = "Monday, 12 May"
+    date: String = "Monday, 12 Feb"
 ) {
     ConstraintLayout(
         modifier = modifier.fillMaxWidth()

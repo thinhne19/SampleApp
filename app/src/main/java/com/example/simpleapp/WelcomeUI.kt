@@ -43,7 +43,7 @@ import com.example.simpleapp.screen.components.Setting
 fun AppNavigation() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "setting") {
+    NavHost(navController = navController, startDestination = "welcome") {
         composable("welcome") { WelcomePage(navController) }
         composable("login") { SignIn(navController) }
         composable("register") {SignUp(navController)}

@@ -16,9 +16,9 @@ data class Todo(
 @RequiresApi(Build.VERSION_CODES.O)
 fun getFakeTodo(): List<Todo> {
     return listOf(
-        Todo(id = 1, title = "Wow, That's day its good", Date.from(Instant.now())),
+        Todo(id = 1, title = "Wow, That's day its not good", Date.from(Instant.now())),
         Todo(id = 2, title = "I don't know why I type that", Date.from(Instant.now())),
-        Todo(id = 3, title = "Hehehehehehe", Date.from(Instant.now())),
+        Todo(id = 3, title = "He he he he he ", Date.from(Instant.now())),
         Todo(id = 4, title = "Huhuhuhuhuhu", Date.from(Instant.now()))
     )
 }
