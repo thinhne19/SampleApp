@@ -42,6 +42,18 @@ import com.example.simpleapp.R
 import androidx.core.content.edit
 import com.example.simpleapp.screen.util.themes
 import android.util.Log
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material3.Divider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.graphics.vector.ImageVector
 
 
 @Composable
@@ -104,6 +116,7 @@ fun BackButton(
                     saveThemeIndex(context, it)
                 }
             )
+            Infomation()
         }
     }
 }
@@ -182,8 +195,93 @@ fun ChangeTheme(
     }
 }
 
+@Composable
+fun Infomation(
+    modifier: Modifier = Modifier
+){
+
+    Text(
+        "Infomation",
+        fontSize = 18.sp,
+        fontWeight = FontWeight.SemiBold,
+        color = Color.Black
+    )
+
+    Column (
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+    ){
+        // Account
+        IconSetting(
+            icon = Icons.Default.Person,
+            title = "Account",
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        // Notifications
+        IconSetting(
+            icon = Icons.Default.Notifications,
+            title = "Notifications",
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+// Privacy & Security
+        IconSetting(
+            icon = Icons.Default.Info,
+            title = "Privacy & Security",
+        )
 
 
+        Spacer(modifier = Modifier.height(8.dp))
+
+// About
+        IconSetting(
+            icon = Icons.Default.Face,
+            title = "About",
+        )
+    }
+}
+
+
+@Composable
+fun IconSetting(
+    icon: ImageVector,
+    title : String,
+    modifier: Modifier = Modifier
+){
+    Row (
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable {  }
+            .padding(vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ){
+        Icon(
+            imageVector = icon,
+            contentDescription = title,
+            modifier = Modifier.size(24.dp),
+            tint = Color.Black
+        )
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        Text(
+            text = title,
+            modifier = Modifier.weight(1f),
+            style = MaterialTheme.typography.bodyLarge,
+            color = Color.Black
+        )
+
+        Icon(
+            imageVector = Icons.Default.KeyboardArrowRight,
+            contentDescription = "Navigate",
+            tint = Color.Black
+        )
+    }
+}
 
 
 
